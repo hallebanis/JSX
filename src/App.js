@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import firstPic from "./imageInSrc.jpeg"
+import secondPic from "./img/imageInPublic.jpg"
+import videoPath from "./Video/video.mp4"
+import "./myApp.css"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header className="header-main"></header>
+      <main className="App-main">
+      <div style={{border:"solid 1px black",maxWidth:"100vw"}}>
+      <h1 className="title red">HALLEB ANIS</h1>
+      <img src={firstPic} alt="" style={{width:600,display:"block",marginBottom:"10px"}} />
+      <img src={secondPic} alt="" style={{width:600,display:"block",marginBottom:"10px"}}/>
+      <video style={{width:"320", height:"240"}} controls>
+        <source src={videoPath} type="video/mp4" />
+      </video>
+    </div>
+      </main>
     </div>
   );
 }
